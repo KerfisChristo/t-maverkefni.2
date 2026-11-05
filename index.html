@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verkefnalisti - Christopher Allen Dubeck</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Verkefnalistinn minn</h1>
+        <p>Haltu utan um verkefnin þín á einfaldan hátt.</p>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Bæta við verkefni</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Skrifaðu nýtt verkefni..."
+                    required
+                >
+                <button type="submit">Bæta við</button>
+            </form>
+        </section>
+
+        <section class="container">
+            <h2>Verkefnin mín</h2>
+
+            <div class="stats">
+                <div>
+                    <strong id="totalTasks">0</strong>
+                    <span>Heildarfjöldi</span>
+                </div>
+                <div>
+                    <strong id="completedTasks">0</strong>
+                    <span>Lokið</span>
+                </div>
+                <div>
+                    <strong id="remainingTasks">0</strong>
+                    <span>Ólokið</span>
+                </div>
+            </div>
+
+            <div class="filters">
+                <button type="button" class="filter-btn active" data-filter="all">Öll</button>
+                <button type="button" class="filter-btn" data-filter="active">Ólokin</button>
+                <button type="button" class="filter-btn" data-filter="completed">Lokið</button>
+            </div>
+
+            <ul id="taskList"></ul>
+            <p id="emptyMessage" hidden>Engin verkefni fundust.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Christopher Allen Dubeck</p>
+    </footer>
+
+</body>
+</html>
